@@ -1,0 +1,416 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Header Styles */
+.header-wrapper {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  margin-right: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-button,
+.signup-button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-button {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background: none;
+}
+
+.signup-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 0 150px;
+}
+
+.hero-section,
+.secondary-hero,
+.writing-hero,
+.reading-hero,
+.listening-hero {
+  text-align: center;
+  margin: 40px 0;
+}
+.hero-text {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: -350px;
+  z-index: 1000;
+  margin-bottom: 200px;
+  margin-left: 30px;
+}
+.hero-image,
+.writing-hero-image {
+  margin: 0 auto;
+  border-radius: 5%;
+  z-index: -1000;
+}
+
+.secondary-hero-image,
+.listening-hero-image {
+  margin: 0 auto;
+  border-radius: 5%;
+  z-index: -1000;
+}
+
+.hero-title,
+.secondary-hero-title,
+.listening-hero-title {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+}
+.writing-hero-title {
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-description,
+.secondary-hero-description,
+.listening-hero-description {
+  line-height: 150%;
+  color: white;
+  font-size: 22px;
+  margin-top: -15px;
+}
+
+.cta-button,
+.secondary-cta-button,
+.writing-cta-button,
+.reading-cta-button,
+.listening-cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin: 40px 0 20px;
+}
+
+.how-it-works,
+.testimonials,
+.features,
+.pricing {
+  margin: 20px 0;
+}
+
+.how-it-works-grid,
+.testimonials-grid,
+.features-grid,
+.pricing-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.how-it-works-item,
+.testimonial-card,
+.feature-card,
+.pricing-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+.testimonial-avatar {
+  border-radius: 50%;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.feature-card {
+  margin-bottom: 30px;
+}
+
+.feature-icon {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.pricing-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.pricing-description {
+  margin: 10px 0;
+}
+
+.pricing-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.pricing-cta {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.footer-logo-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-login-button,
+.footer-signup-button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.footer-login-button {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background: none;
+}
+
+.footer-signup-button {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 0 100px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 0 50px;
+  }
+
+  .hero-text {
+    margin-top: -300px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title,
+  .hero-description {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .cta-button,
+  .secondary-cta-button {
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  .how-it-works-grid,
+  .testimonials-grid,
+  .features-grid,
+  .pricing-grid {
+    flex-direction: column;
+  }
+
+  .how-it-works-item,
+  .testimonial-card,
+  .feature-card,
+  .pricing-card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title,
+  .secondary-hero-title {
+    color: black;
+  }
+
+  .hero-description,
+  .secondary-hero-description {
+    color: black;
+  }
+
+  .hero-section,
+  .secondary-hero {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .hero-text,
+  .secondary-hero-text {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  .hero-image,
+  .secondary-hero-image {
+    flex: 1;
+  }
+
+  .how-it-works-grid,
+  .testimonials-grid,
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .hero-text {
+    margin-bottom: 20px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 10px 10px;
+  }
+
+  .hero-title,
+  .secondary-hero-title {
+    color: black;
+    font-size: 32px;
+  }
+
+  .hero-description,
+  .secondary-hero-description {
+    color: black;
+    font-size: 18px;
+  }
+
+  .cta-button,
+  .secondary-cta-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .hero-text {
+    margin-bottom: 20px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+  }
+}

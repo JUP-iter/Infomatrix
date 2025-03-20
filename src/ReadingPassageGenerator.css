@@ -1,0 +1,39 @@
+.listening-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.voice-selector {
+  margin: 10px 0;
+}
+
+.text-box pre {
+  white-space: pre-wrap;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.questions ol {
+  margin-top: 10px;
+}
+
+.loading {
+  color: blue;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin: 10px 0;
+}

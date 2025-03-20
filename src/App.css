@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+:root {
+  --content-width: 1200px;
+  --container-padding: 1.25rem;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: var(--container-padding);
+}
+
+.header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #f4efe6;
+}
+
+.header h1 {
+  color: #1c160c;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.content-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  border: 2px dashed #e9dfce;
+  border-radius: 1rem;
+  padding: 3.5rem 1.5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  width: 100%;
+}
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c160c;
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.HeyGen-container {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeyGen-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the container while maintaining aspect ratio */
+  position: absolute; /* Keeps the video fixed within the container */
+}
+
+
+.HeyGenStreamingAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.HeyGenStreamingAvatar .App-header {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.HeyGenStreamingAvatar video {
+  width: 100%;
+  border-radius: 50px;
+}
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.button {
+  display: flex;
+  min-width: 84px;
+  max-width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  height: 3rem;
+  padding: 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+}
+
+.btn-primary {
+  border-radius: 9999px;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: #019863;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-secondary {
+  border-radius: 9999px;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: #019863;
+  color: #ffffff;
+  border: none;
+}
+
+.button-start {
+  background-color: #019863;
+  color: #ffffff;
+  border: none;
+}
+
+.button-stop {
+  background-color: #f4efe6;
+  color: #1c160c;
+  border: none;
+}
+
+.heading {
+  color: #1c160c;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  padding: 1.25rem 1rem 0.75rem;
+}
+
+.analysis-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.analysis-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: 2px dashed #e9dfce;
+  border-radius: 1rem;
+  padding: 3.5rem 1.5rem;
+}
+
+.analysis-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 480px;
+  text-align: center;
+}
+
+.analysis-text {
+  color: #1c160c;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.loading {
+  margin-top: 0.5rem;
+  color: #1c160c;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+}
+
+.analysis-result {
+  color: #1c160c;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.015em;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1c160c;
+  position: absolute;
+  left: var(--container-padding);
+  top: 40px;
+  transform: translateY(-50%);
+}
+
+.back-button .icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 8px;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .HeyGen-container {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-left {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+
+  .container {
+    padding: var(--container-padding);
+  }
+
+  .back-button {
+    left: var(--container-padding);
+  }
+}
