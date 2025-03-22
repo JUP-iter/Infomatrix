@@ -149,7 +149,7 @@ const Landing = () => {
                   className="testimonial-avatar"
                   alt="Janny's profile picture"
                 />
-                <h3 className="testimonial-name">Nurislam(Speaking 7.5)</h3>
+                <h3 className="testimonial-name">Nurislam</h3>
                 <p className="testimonial-text">
                   The speaking analysis feature is really useful. It gives you a
                   score and detailed feedback, so you know what to work on. I
@@ -159,11 +159,11 @@ const Landing = () => {
               <div className="testimonial-card">
                 <img
                   loading="lazy"
-                  src="\photo_2024-12-18_21-56-47.jpg"
+                  src="\islam.jpg"
                   className="testimonial-avatar"
                   alt="John's profile picture"
                 />
-                <h3 className="testimonial-name">Nagashbek(Speaking 7)</h3>
+                <h3 className="testimonial-name">Islam</h3>
                 <p className="testimonial-text">
                   I've been using the AI for a few weeks and I can already see a
                   big improvement in my speaking. It's a great tool for IELTS
@@ -177,7 +177,7 @@ const Landing = () => {
                   className="testimonial-avatar"
                   alt="Jane's profile picture"
                 />
-                <h3 className="testimonial-name">Sanzhar(Speaking 7.5)</h3>
+                <h3 className="testimonial-name">Sanzhar</h3>
                 <p className="testimonial-text">
                   The AI is so smart. It's like talking to a real person. It's
                   helped me a lot with my speaking skills.
