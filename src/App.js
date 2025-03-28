@@ -100,9 +100,6 @@ const App = () => {
   return (
     <div className="container">
       <header className="header">
-        <Link to="/" className="back-button">
-          <img src="back-icon.png" alt="Back" className="icon" />{" "}
-        </Link>
         <div className="logo-container">
           <img
             loading="lazy"
@@ -114,9 +111,6 @@ const App = () => {
         </div>
       </header>
       <main className="main">
-        <div className="HeyGen-container">
-          <HeyGen ref={heyGenRef} />
-        </div>
         <div className="content-left">
           <Recorder
             isRecording={isRecording}
