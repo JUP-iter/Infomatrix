@@ -238,11 +238,7 @@ const Dialog = () => {
 
   return (
     <div className="container">
-      <header className="header">
-        <a href="/" className="back-button">
-          <img src="back-icon.png" alt="Back" className="icon" />
-        </a>
-      </header>
+      <header className="header"></header>
       <h1>Real-Time Conversation with AI</h1>
       <div id="conversation-container">
         <div id="transcript">{transcript}</div>
