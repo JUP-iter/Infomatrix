@@ -227,6 +227,33 @@ const Landing = () => {
                   improve your skills.
                 </p>
               </div>
+              <div className="feature-card">
+                <img
+                  loading="lazy"
+                  src="./reading.png"
+                  className="feature-icon"
+                  alt="Reading Passage Generator icon"
+                />
+                <h3 className="feature-title">Reading Passage Generator</h3>
+                <p className="feature-description">
+                  Generate high-quality reading passages for IELTS preparation
+                  and practice answering comprehension questions.
+                </p>
+              </div>
+              <div className="feature-card">
+                <img
+                  loading="lazy"
+                  src="./listening.png"
+                  className="feature-icon"
+                  alt="Listening Powered by AI icon"
+                />
+                <h3 className="feature-title">Listening Powered by AI</h3>
+                <p className="feature-description">
+                  Engage with AI-generated listening exercises, practice
+                  comprehension, and improve your listening skills with
+                  real-time audio responses.
+                </p>
+              </div>
             </div>
           </div>
         </main>
