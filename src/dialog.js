@@ -224,7 +224,9 @@ const Dialog = () => {
           .replace(/\n\n/g, "</p><p>")
           .replace(/\n/g, "<br>");
 
-        analysisElement.current.innerHTML = `<p>${formattedText}</p>`;
+        if (analysisElement.current) {
+          analysisElement.current.innerHTML = `<p>${formattedText}</p>`;
+        }
       } else {
         analysisElement.current.innerHTML =
           "<p>No analysis result available.</p>";
