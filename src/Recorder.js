@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Timer from "./Timer.js";
 
 const Recorder = ({
@@ -12,23 +12,28 @@ const Recorder = ({
   const [transcript, setTranscript] = useState("");
   const recognition = useRef(null);
 
-  if (typeof window !== "undefined" && "webkitSpeechRecognition" in window) {
-    recognition.current = new window.webkitSpeechRecognition();
-  } else {
-    alert("Your browser does not support Web Speech API");
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined" && "webkitSpeechRecognition" in window) {
+      recognition.current = new window.webkitSpeechRecognition();
+      recognition.current.continuous = true;
+      recognition.current.interimResults = false;
+      recognition.current.lang = "en-EN";
 
-  recognition.current.continuous = true;
-  recognition.current.interimResults = false;
-  recognition.current.lang = "en-EN";
+      recognition.current.onresult = (event) => {
+        const transcript = event.results[event.resultIndex][0].transcript;
+        setTranscript((prev) => prev + transcript + " ");
+      };
 
-  recognition.current.onresult = (event) => {
-    const transcript = event.results[event.resultIndex][0].transcript;
-    setTranscript((prev) => prev + transcript + " ");
-  };
+      recognition.current.onend = () => {
+        setIsRecording(false);
+      };
+    } else {
+      alert("Your browser does not support Web Speech API");
+    }
+  }, []); // Создаем `recognition` только один раз при монтировании компонента
 
   const startRecording = async () => {
-    if (!isRecording) {
+    if (!isRecording && recognition.current) {
       setTranscript("");
       setIsRecording(true);
       recognition.current.start();
@@ -37,7 +42,7 @@ const Recorder = ({
   };
 
   const stopRecording = () => {
-    if (isRecording) {
+    if (isRecording && recognition.current) {
       recognition.current.stop();
       setIsRecording(false);
       analyzeText(question, transcript);
