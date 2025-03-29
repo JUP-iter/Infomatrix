@@ -1,9 +1,10 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Recorder from "./Recorder.js";
 import Analysis from "./Analysis.js";
 import { PacmanLoader } from "react-spinners";
 import "./App.css";
+
 import HeyGen from "./HeyGen.jsx";
 
 const App = () => {
@@ -100,6 +101,9 @@ const App = () => {
   return (
     <div className="container">
       <header className="header">
+        <Link to="/" className="back-button">
+          <img src="back-icon.png" alt="Back" className="icon" />{" "}
+        </Link>
         <div className="logo-container">
           <img
             loading="lazy"
@@ -111,6 +115,9 @@ const App = () => {
         </div>
       </header>
       <main className="main">
+        <div className="HeyGen-container">
+          <HeyGen ref={heyGenRef} />
+        </div>
         <div className="content-left">
           <Recorder
             isRecording={isRecording}
