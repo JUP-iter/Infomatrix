@@ -13,6 +13,7 @@ const App = () => {
   const [question, setQuestion] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const heyGenRef = useRef(null);
+  const mediaStreamRef = useRef(null);
 
   const askRandomQuestion = async () => {
     setLoading(true);
@@ -98,6 +99,13 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    if (!isRecording && mediaStreamRef.current) {
+      mediaStreamRef.current.getTracks().forEach((track) => track.stop());
+      mediaStreamRef.current = null;
+    }
+  }, [isRecording]);
+
   return (
     <div className="container">
       <header className="header">
@@ -126,6 +134,7 @@ const App = () => {
             analyzeText={analyzeText}
             question={question}
             handleSpeak={heyGenRef.current?.speakText}
+            mediaStreamRef={mediaStreamRef}
           />
           <h2 className="heading">Analysis</h2>
           {loading ? (
